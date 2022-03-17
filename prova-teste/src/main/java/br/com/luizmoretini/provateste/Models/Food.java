@@ -1,8 +1,10 @@
-package Models;
+package br.com.luizmoretini.provateste.Models;
+
+import java.util.UUID;
 
 public class Food {
 	
-	public int id;
+	public UUID id;
 	public String name;
 	public double averageWeight;
 	public int calorie;
@@ -10,10 +12,10 @@ public class Food {
 	public String nationality;
 	
 	
-	public Food(int id, String name, double averageWeight, int calorie, String principalIngredient,
+	public Food(String name, double averageWeight, int calorie, String principalIngredient,
 			String nationality) {
 		super();
-		this.id = id;
+		this.id = UUID.randomUUID();
 		this.name = name;
 		this.averageWeight = averageWeight;
 		this.calorie = calorie;
@@ -22,13 +24,8 @@ public class Food {
 	}
 
 
-	public int getId() {
+	public UUID getId() {
 		return id;
-	}
-
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 
